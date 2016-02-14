@@ -25,6 +25,18 @@ class TwitterClient: BDBOAuth1SessionManager {
         return Static.instance
     }
     
+    func homeTimelineWithCompletion(params: NSDictionary?, completion: (tweets: [Tweet]?, error: NSError?) -> ()) {
+        GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+                let tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
+                completion(tweets:tweets, error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+                print("error getting home timeline")
+                print(error)
+                completion(tweets: nil, error: error)
+        })
+
+    }
+    
     func loginWithCompletion(completion: (user: User?, err: NSError?) -> ()) {
         loginCompletion = completion
         
@@ -56,7 +68,9 @@ class TwitterClient: BDBOAuth1SessionManager {
             })
             
             }) { (error: NSError!) -> Void in
-                self.loginCompletion?(user: nil, error: error);        }
+                print("failed to recieve access token")
+                self.loginCompletion?(user: nil, error: error);
+            }
     }
     
 }

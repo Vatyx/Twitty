@@ -18,6 +18,8 @@ class User: NSObject {
     var screenname: String?
     var profileImageURL: String?
     var tagline: String?
+    var profile_background_color: String?
+
     var dictionary: NSDictionary
     
     init(dictionary: NSDictionary) {
@@ -27,11 +29,13 @@ class User: NSObject {
         screenname = dictionary["screen_name"] as? String
         profileImageURL = dictionary["profile_image_url"] as? String
         tagline = dictionary["description"] as? String
+        profile_background_color = dictionary["profile_background_color"] as? String
     }
     
     func logout() {
         User.currentUser = nil
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
+        NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
     }
     
     class var currentUser: User? {
