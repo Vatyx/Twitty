@@ -51,7 +51,7 @@ class TweetCell: UITableViewCell {
             gradient.colors = [firstColor.CGColor, UIColor.whiteColor().CGColor]
             gradient.locations = [0.0 , 1.0]
             gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
-            gradient.endPoint = CGPoint(x: 0.25, y: 1.0)
+            gradient.endPoint = CGPoint(x: 0.10, y: 1.0)
             gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.viewWithTag(0)!.frame.size.width, height: self.viewWithTag(0)!.frame.size.height + 500)
             //self.viewWithTag(0)?.backgroundColor = UIColor.greenColor()
             self.backgroundView = UIView()

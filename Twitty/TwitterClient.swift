@@ -108,6 +108,7 @@ class TwitterClient: BDBOAuth1SessionManager {
         TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "Twitty://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             print("Got request token.")
             let authURL = NSURL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token)")
+            print(authURL)
             UIApplication.sharedApplication().openURL(authURL!)
             }) { (error: NSError!) -> Void in
                 self.loginCompletion?(user: nil, error: error);
@@ -115,6 +116,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     func openURL(url: NSURL) {
+        print("Inside openURL")
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential(queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
             print("Got Access Token!")
             
