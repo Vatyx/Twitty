@@ -137,11 +137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twitty/TwitterClient.swift"
-            timestampString = "477101782.971715"
+            timestampString = "477216941.946397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "openURL(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,11 +153,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Twitty/TweetCell.swift"
-            timestampString = "477105914.485267"
+            timestampString = "477219165.777809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "TweetCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitty/TwitterClient.swift"
+            timestampString = "477211745.988629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
+            landmarkName = "homeTimelineWithCompletion(_:completion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Twitty.TwitterClient.homeTimelineWithCompletion (Twitty.TwitterClient)(Swift.Optional&lt;__ObjC.NSDictionary&gt;, completion : (tweets : Swift.Optional&lt;Swift.Array&lt;Twitty.Tweet&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Twitty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Vatyx/Desktop/Twitty/Twitty/TwitterClient.swift"
+                  timestampString = "477211746.034594"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Twitty.TwitterClient.(homeTimelineWithCompletion (Twitty.TwitterClient) -&gt; (Swift.Optional&lt;__ObjC.NSDictionary&gt;, completion : (tweets : Swift.Optional&lt;Swift.Array&lt;Twitty.Tweet&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Twitty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Vatyx/Desktop/Twitty/Twitty/TwitterClient.swift"
+                  timestampString = "477211746.035021"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitty/TwitterClient.swift"
+            timestampString = "477216863.380487"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "sendTweet(_:params:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Twitty/TweetCell.swift"
+            timestampString = "477219165.777809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "TweetCell"
             landmarkType = "3">
          </BreakpointContent>

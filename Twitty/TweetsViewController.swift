@@ -23,11 +23,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Create a navigation item with a title
         let navigationItem = UINavigationItem()
-        navigationItem.title = "Title"
+        navigationItem.title = "Twitty"
         
         // Create left and right button for navigation item
-        let leftButton =  UIBarButtonItem(title: "Save", style:   UIBarButtonItemStyle.Plain, target: self, action: "btn_clicked:")
-        let rightButton = UIBarButtonItem(title: "Right", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let leftButton =  UIBarButtonItem(title: "Logout", style:   UIBarButtonItemStyle.Plain, target: self, action: "onLogout:")
+        let rightButton = UIBarButtonItem(title: "Tweet", style: UIBarButtonItemStyle.Plain, target: self, action: "tweet:")
         
         // Create two buttons for the navigation item
         navigationItem.leftBarButtonItem = leftButton
@@ -58,6 +58,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser!.logout()
+    }
+    
+    @IBAction func tweet(sender: AnyObject) {
+        self.performSegueWithIdentifier("createTweet", sender: self)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
